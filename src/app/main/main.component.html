@@ -44,50 +44,35 @@
     <!-- Grid Section -->
     <h2 class="movie-section-title">¡Compra o Reserva!</h2>
     <section class="movie-section">
-        <div class="movie-item">
-            <img src="../../assets/img/guardianes.jpg" alt="">
-            <h4>Guardianes Vol. 3</h4>
-            <p>Comprar</p>
-        </div>
-        <div class="movie-item">
-            <img src="../../assets/img/mario2.webp" alt="">
-            <h4>Mario Bros: La Película</h4>
-            <p>Comprar</p>
-        </div>
-        <div class="movie-item">
-            <img src="../../assets/img/john.jpg" alt="">
-            <h4>John Wick 4</h4>
-            <p>Comprar</p>
-        </div>
-        <div class="movie-item">
-            <img src="../../assets/img/oppen.webp" alt="">
-            <h4>Oppenheimer</h4>
-            <p>Reservar</p>
-        </div>
-        <div class="movie-item">
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-        </div>
-        <div class="movie-item">
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-        </div>
-        <div class="movie-item">
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-        </div>
-        <div class="movie-item">
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-        </div>
+        
+        <ng-container *ngFor="let poster of posters">
+            <div class="movie-item">
+                <div class="poster-container">
+                    <img [src]="poster.img" alt="">
+                </div>
+                <h4>{{poster.titulo}}</h4>
+                <p>{{poster.pagar}}</p>
+            </div>
+        </ng-container>
+        
         <div class="link">
             <a href="">Ver Todo</a>
         </div>
     </section>
     <!-- Main Article -->
-    <main class=""></main>
+    <main class="main-art">
+        <h2>¿Qué es Flick?</h2>
+        <p>Flick es tu página de confianza para comprar o reservar tus boletos de las películas más populares del momento. Contamos con el apoyo de 15 cines alrededor de todo México. En Flick puedes encontrar descuentos y otras sorpresas para que tu experiencia sea más satisfactoria y sencilla.</p>
+
+    </main>
+    
+    <section class="sponsors">
+        <h1>Nuestros principales socios</h1>
+        <div class="sponsor-img">
+            <img src="../../assets/img/cinepolis.jpg" alt="">
+            <img src="../../assets/img/cinemex.jpg" alt="">
+            <img src="../../assets/img/cinemagic.jpg" alt="">
+            <img src="../../assets/img/kristal.png" alt="">
+        </div>
+    </section>
 </div>
